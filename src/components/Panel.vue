@@ -53,12 +53,7 @@ function anim () {
     const originalVal = obj.elem.getAttribute('val')
 
     if (obj.randomLetterCount === undefined) {
-      obj.randomLetterCount = originalVal.length <= 10
-        ? 20 : originalVal.length <= 30
-        ? 15 : originalVal.length <= 50
-        ? 10 : originalVal.length <= 70
-        ? 5 : originalVal.length <= 90
-        ? 2 : 1
+      obj.randomLetterCount = 50
     }
 
     if (!obj.lettersQueue) {
