@@ -145,8 +145,9 @@ export default {
           min: new Date('2013-02-02').getTime(),
           max: today,
           labels: {
+            offsetY: 5,
             style: {
-              fontSize: '1rem',
+              fontSize: '1.2rem',
               fontFamily: 'Share Tech Mono, monospace',
               color: '#fff'
             }
