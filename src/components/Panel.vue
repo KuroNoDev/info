@@ -34,7 +34,7 @@ export default {
         objectsToAnimate.push({elem})
       })
 
-      fpsInterval = 1000 / 75
+      fpsInterval = 1000 / 144
       then = Date.now()
       startTime = then
       requestAnimationFrame(anim.bind(this))
@@ -68,10 +68,10 @@ function anim () {
 
       if (obj.randomLetterCount === undefined) {
         obj.randomLetterCount = originalVal.length <= 10
-          ? 10 : originalVal.length <= 30
-          ? 8 : originalVal.length <= 50
-          ? 6 : originalVal.length <= 70
-          ? 4 : originalVal.length <= 90
+          ? 6 : originalVal.length <= 30
+          ? 5 : originalVal.length <= 50
+          ? 4 : originalVal.length <= 70
+          ? 3 : originalVal.length <= 90
           ? 2 : 1
       }
 
