@@ -9,6 +9,9 @@ import { setInterval } from 'timers';
 const letters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'.split('')
 const objectsToAnimate = []
 let loadedImages = 0
+let stop = false
+let frameCount = 0
+let fps, fpsInterval, startTime, now, then, elapsed
 
 export default {
   props: ['images'],
@@ -31,6 +34,9 @@ export default {
         objectsToAnimate.push({elem})
       })
 
+      fpsInterval = 1000 / 75
+      then = Date.now()
+      startTime = then
       requestAnimationFrame(anim.bind(this))
     }
   },
@@ -40,37 +46,49 @@ export default {
 }
 
 function anim () {
-  const unfinished = objectsToAnimate.filter((obj) => obj.elem.innerHTML !== obj.elem.getAttribute('val'))
-  
-  if (unfinished.length === 0) {
-    this.$el.style.width = ''
-    this.$el.style.height = ''
-    return
-  }
-
-  unfinished.forEach((obj) => {
-    const currentVal = obj.elem.innerHTML
-    const originalVal = obj.elem.getAttribute('val')
-
-    if (obj.randomLetterCount === undefined) {
-      obj.randomLetterCount = 50
-    }
-
-    if (!obj.lettersQueue) {
-      obj.lettersQueue = [...getRandom(letters, obj.randomLetterCount), originalVal.charAt(currentVal.length)]
-    } else if (Array.isArray(obj.lettersQueue)) {
-      if (obj.lettersQueue.length === obj.randomLetterCount + 1)
-        obj.elem.innerHTML += obj.lettersQueue.shift()
-      if (obj.lettersQueue.length > 0)
-        obj.elem.innerHTML = obj.elem.innerHTML !== ''
-          ? obj.elem.innerHTML.replace(/(\s|\S)$/, obj.lettersQueue.shift())
-          : obj.lettersQueue.shift()
-      else
-        delete obj.lettersQueue
-    }
-  })
-
   requestAnimationFrame(anim.bind(this))
+
+  now = Date.now();
+  elapsed = now - then;
+
+  if (elapsed > fpsInterval) {
+    then = now - (elapsed % fpsInterval)
+
+    const unfinished = objectsToAnimate.filter((obj) => obj.elem.innerHTML !== obj.elem.getAttribute('val'))
+  
+    if (unfinished.length === 0) {
+      this.$el.style.width = ''
+      this.$el.style.height = ''
+      return
+    }
+
+    unfinished.forEach((obj) => {
+      const currentVal = obj.elem.innerHTML
+      const originalVal = obj.elem.getAttribute('val')
+
+      if (obj.randomLetterCount === undefined) {
+        obj.randomLetterCount = originalVal.length <= 10
+          ? 10 : originalVal.length <= 30
+          ? 8 : originalVal.length <= 50
+          ? 6 : originalVal.length <= 70
+          ? 4 : originalVal.length <= 90
+          ? 2 : 1
+      }
+
+      if (!obj.lettersQueue) {
+        obj.lettersQueue = [...getRandom(letters, obj.randomLetterCount), originalVal.charAt(currentVal.length)]
+      } else if (Array.isArray(obj.lettersQueue)) {
+        if (obj.lettersQueue.length === obj.randomLetterCount + 1)
+          obj.elem.innerHTML += obj.lettersQueue.shift()
+        if (obj.lettersQueue.length > 0)
+          obj.elem.innerHTML = obj.elem.innerHTML !== ''
+            ? obj.elem.innerHTML.replace(/(\s|\S)$/, obj.lettersQueue.shift())
+            : obj.lettersQueue.shift()
+        else
+          delete obj.lettersQueue
+      }
+    })
+  }
 }
 
 function getRandom(arr, n) {
