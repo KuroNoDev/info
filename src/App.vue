@@ -76,7 +76,7 @@
         </h3>
         <h3>Technologies: Node.js, Websockets, ES6, AnguarJS</h3>
       </Panel>
-      <Panel v-slot="slotProps" :images="2" style="max-width: 80%;">
+      <Panel>
         <h1>TORO Build</h1>
         <h3>A web based SPA builder</h3>
         <h3>Technologies: Node.js, ES6, AnguarJS</h3>
@@ -146,7 +146,7 @@ html {
 
 .row {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: flex-start;
   margin-top: 20px !important;
 }
