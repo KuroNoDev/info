@@ -148,6 +148,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
   margin-top: 20px !important;
 }
 

@@ -6,23 +6,29 @@
 
 <script>
 const letters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'.split('')
+const panels = []
+let stop = false
+let fpsInterval = 1000 / 144
+let then = Date.now()
+let startTime = then
+let now, elapsed
+
+animate()
 
 export default {
   props: ['images'],
   created () {
-    this.objectsToAnimate = []
     this.loadedImages = 0
-    this.stop = false
-    this.frameCount = 0
   },
   methods: {
     imgOnload () {
       this.loadedImages += 1
-      if (this.images && this.loadedImages === this.images) this.startAnimate()
+      if (this.images && this.loadedImages === this.images) this.addToAnimate()
     },
-    startAnimate () {
+    addToAnimate () {
       const bounding = this.$el.getBoundingClientRect()
       const {width, height} = bounding
+      const objectsToAnimate = []
       
       this.$el.style.width = `${width}px`
       this.$el.style.height = `${height}px`
@@ -30,64 +36,67 @@ export default {
       Array.from(this.$el.querySelectorAll('*:not(.no-animate)')).forEach((elem) => {
         elem.setAttribute('val', elem.innerHTML)
         elem.innerHTML = ''
-        this.objectsToAnimate.push({elem})
+        objectsToAnimate.push({elem})
       })
 
-      this.fpsInterval = 1000 / 144
-      this.then = Date.now()
-      this.startTime = this.then
-      requestAnimationFrame(this.animate)
-    },
-    animate () {
-      requestAnimationFrame(this.animate)
-
-      this.now = Date.now()
-      this.elapsed = this.now - this.then
-
-      if (this.elapsed > this.fpsInterval) {
-        this.then = this.now - (this.elapsed % this.fpsInterval)
-
-        if (!isInViewport(this.$el)) return
-
-        const unfinished = this.objectsToAnimate.filter((obj) => obj.elem.innerHTML !== obj.elem.getAttribute('val'))
-      
-        if (!unfinished || unfinished.length === 0) {
-          if (this.$el.style.width !== '') this.$el.style.width = ''
-          if (this.$el.style.height !== '') this.$el.style.height = ''
-          return
-        }
-
-        unfinished.forEach((obj) => {
-          const currentVal = obj.elem.innerHTML
-          const originalVal = obj.elem.getAttribute('val')
-
-          if (obj.randomLetterCount === undefined) {
-            obj.randomLetterCount = originalVal.length <= 10
-              ? 6 : originalVal.length <= 30
-              ? 5 : originalVal.length <= 50
-              ? 4 : originalVal.length <= 70
-              ? 3 : originalVal.length <= 90
-              ? 2 : 1
-          }
-
-          if (!obj.lettersQueue) {
-            obj.lettersQueue = [...getRandom(letters, obj.randomLetterCount), originalVal.charAt(currentVal.length)]
-          } else if (Array.isArray(obj.lettersQueue)) {
-            if (obj.lettersQueue.length === obj.randomLetterCount + 1)
-              obj.elem.innerHTML += obj.lettersQueue.shift()
-            if (obj.lettersQueue.length > 0)
-              obj.elem.innerHTML = obj.elem.innerHTML !== ''
-                ? obj.elem.innerHTML.replace(/(\s|\S)$/, obj.lettersQueue.shift())
-                : obj.lettersQueue.shift()
-            else
-              delete obj.lettersQueue
-          }
-        })
-      }
+      panels.push({
+        el: this.$el,
+        objectsToAnimate
+      })
     }
   },
   mounted () {
-    if (!this.images) this.startAnimate()
+    if (!this.images) this.addToAnimate()
+  }
+}
+
+function animate () {
+  requestAnimationFrame(animate)
+
+  now = Date.now()
+  elapsed = now - then
+
+  if (elapsed > fpsInterval) {
+    then = now - (elapsed % fpsInterval)
+
+    panels.forEach((panel) => {
+      if (!isInViewport(panel.el)) return
+
+      const unfinished = panel.objectsToAnimate.filter((obj) => obj.elem.innerHTML !== obj.elem.getAttribute('val'))
+    
+      if (!unfinished || unfinished.length === 0) {
+        if (panel.el.style.width !== '') panel.el.style.width = ''
+        if (panel.el.style.height !== '') panel.el.style.height = ''
+        return
+      }
+
+      unfinished.forEach((obj) => {
+        const currentVal = obj.elem.innerHTML
+        const originalVal = obj.elem.getAttribute('val')
+
+        if (obj.randomLetterCount === undefined) {
+          obj.randomLetterCount = originalVal.length <= 10
+            ? 6 : originalVal.length <= 30
+            ? 5 : originalVal.length <= 50
+            ? 4 : originalVal.length <= 70
+            ? 3 : originalVal.length <= 90
+            ? 2 : 1
+        }
+
+        if (!obj.lettersQueue) {
+          obj.lettersQueue = [...getRandom(letters, obj.randomLetterCount), originalVal.charAt(currentVal.length)]
+        } else if (Array.isArray(obj.lettersQueue)) {
+          if (obj.lettersQueue.length === obj.randomLetterCount + 1)
+            obj.elem.innerHTML += obj.lettersQueue.shift()
+          if (obj.lettersQueue.length > 0)
+            obj.elem.innerHTML = obj.elem.innerHTML !== ''
+              ? obj.elem.innerHTML.replace(/(\s|\S)$/, obj.lettersQueue.shift())
+              : obj.lettersQueue.shift()
+          else
+            delete obj.lettersQueue
+        }
+      })
+    })
   }
 }
 
