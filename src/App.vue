@@ -61,11 +61,16 @@
         <h3>Participants must place their towers on the most efficient position</h3>
         <h3>Technologies: Node.js, Javascript, Websockets</h3>
       </Panel>
+    </div>
+    <div class="row">
       <Panel>
         <h1>TORO IT Elite 2019 Championship - TORO CIV</h1>
         <h3>A civilization-esque game</h3>
         <h3>Participants must build their own civilization with the fastest strategy</h3>
         <h3>Technologies: Node.js, Javascript</h3>
+        <video class="hidden no-animate" controls>
+          <source class="no-animate" src="./assets/torociv.mp4" type="video/mp4">
+        </video>
       </Panel>
     </div>
     <div class="row">
@@ -77,10 +82,20 @@
         </h3>
         <h3>Technologies: Node.js, Websockets, ES6, AnguarJS</h3>
       </Panel>
+    </div>
+    <div class="row">
       <Panel>
         <h1>TORO Build</h1>
         <h3>A web based SPA builder</h3>
         <h3>Technologies: Node.js, ES6, AnguarJS</h3>
+        <div class="hidden no-animate" style="display: flex; flex-direction: column;">
+          <div class="no-animate" style="flex: 1;">
+            <img src="./assets/build 1.gif" style="display: block; width: 80%; margin-left: 10%;">
+          </div>
+          <div class="no-animate" style="flex: 1;">
+            <img src="./assets/build 2.gif" style="display: block; width: 80%; margin-left: 10%;">
+          </div>
+        </div>
       </Panel>
     </div>
   </div>
@@ -155,5 +170,9 @@ html {
 
 a {
   color: #fff;
+}
+
+.hidden {
+  display: none !important;
 }
 </style>

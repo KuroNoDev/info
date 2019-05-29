@@ -66,7 +66,12 @@ function animate () {
     
       if (!unfinished || unfinished.length === 0) {
         if (panel.el.style.width !== '') panel.el.style.width = ''
-        if (panel.el.style.height !== '') panel.el.style.height = ''
+        if (panel.el.style.height !== '') {
+          panel.el.style.height = ''
+          panel.el.querySelectorAll('.hidden').forEach((hiddenEl) => {
+            hiddenEl.classList.remove('hidden')
+          })
+        }
         return
       }
 
