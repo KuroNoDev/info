@@ -21,7 +21,16 @@ export default [{
     x: 'Node.js',
     y: [new Date('2016-04-15').getTime(), today]
   }, {
+    x: 'Gulp',
+    y: [new Date('2016-04-15').getTime(), today]
+  }, {
+    x: 'Webpack',
+    y: [new Date('2016-04-15').getTime(), today]
+  }, {
     x: 'Websockets',
+    y: [new Date('2016-01-15').getTime(), today]
+  }, {
+    x: 'Git',
     y: [new Date('2016-01-15').getTime(), today]
   }, {
     x: 'mySQL',

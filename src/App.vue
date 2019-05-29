@@ -23,6 +23,7 @@
         <h1>AFFILIATIONS</h1>
         <h3>TORO Limited</h3>
         <h4>Date joined: November 2014</h4>
+        <h4>Role: Frontend Team Leader</h4>
         <h4>Last seen: May 2019</h4>
       </Panel>
       <Panel>
