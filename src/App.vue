@@ -11,7 +11,9 @@
             <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/avatar.png" style="display: block; width: 100%;">
           </div>
           <div class="no-animate" style="display: flex; flex-direction: column;">
-            <h3>CODENAME: MYKE</h3>
+            <h3>Fullname: Mykel Ray Perez</h3>
+            <h3>Alias: MYKE</h3>
+            <h3>Age: 23</h3>
             <br class="no-animate">
             <h4>A frontend developer that can operate without getting energy from coffee</h4>
             <h4>Rumors say that he lives in a swamp</h4>
