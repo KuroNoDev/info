@@ -24,25 +24,25 @@
       <Panel>
         <h1>AFFILIATIONS</h1>
         <h3>TORO Limited</h3>
+        <h3>Role: Frontend Team Leader</h3>
         <h4>Date joined: November 2014</h4>
-        <h4>Role: Frontend Team Leader</h4>
         <h4>Last seen: May 2019</h4>
       </Panel>
       <Panel>
         <h1>PUBLIC SIGHTINGS</h1>
         <h3>Location: Holy Angel University</h3>
-        <h3>Date: March 2016</h3>
         <h4>Operation: Hackathon</h4>
+        <h3>Date: March 2016</h3>
         <h4>Role: Speaker and Facilitator</h4>
         <br>
-        <h3>Location: Angel University Foundation</h3>
-        <h3>Date: August 2016</h3>
+        <h3>Location: Angeles University Foundation</h3>
         <h4>Operation: Basic Web Development Seminar</h4>
+        <h3>Date: August 2016</h3>
         <h4>Role: Resource Speaker</h4>
         <br>
         <h3>Location: PSITE Region 3</h3>
-        <h3>Date: September 2017</h3>
         <h4>Operation: Conference and Hackathon</h4>
+        <h3>Date: September 2017</h3>
         <h4>Role: Speaker and Facilitator</h4>
       </Panel>
     </div>
