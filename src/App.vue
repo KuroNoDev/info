@@ -70,7 +70,7 @@
         <h3>A civilization-esque game</h3>
         <h3>Participants must build their own civilization with the fastest strategy</h3>
         <h3>Technologies: Node.js, Javascript</h3>
-        <video class="hidden no-animate" controls>
+        <video class="hidden no-animate" controls style="margin-top:20px;">
           <source class="no-animate" src="./assets/torociv.mp4" type="video/mp4">
         </video>
       </Panel>
@@ -91,10 +91,10 @@
         <h3>A web based SPA builder</h3>
         <h3>Technologies: Node.js, ES6, AnguarJS</h3>
         <div class="hidden no-animate" style="display: flex; flex-direction: column;">
-          <div class="no-animate" style="flex: 1;">
+          <div class="no-animate" style="flex: 1; margin-top:20px;">
             <img src="./assets/build 1.gif" style="display: block; width: 80%; margin-left: 10%;">
           </div>
-          <div class="no-animate" style="flex: 1;">
+          <div class="no-animate" style="flex: 1; margin-top:20px;">
             <img src="./assets/build 2.gif" style="display: block; width: 80%; margin-left: 10%;">
           </div>
         </div>
@@ -167,7 +167,7 @@ html {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-top: 20px !important;
+  margin-top: 50px !important;
 }
 
 a {
