@@ -108,12 +108,12 @@
         <h3>A web based SPA builder</h3>
         <h3>Technologies: Node.js, ES6, AnguarJS</h3>
         <div class="hidden no-animate" style="display: flex; flex-direction: column;">
-          <div class="no-animate" style="flex: 1; margin-top:20px;">
-            <img src="./assets/build 1.gif" style="display: block; width: 80%; margin-left: 10%;">
-          </div>
-          <div class="no-animate" style="flex: 1; margin-top:20px;">
-            <img src="./assets/build 2.gif" style="display: block; width: 80%; margin-left: 10%;">
-          </div>
+          <video class="hidden no-animate" controls style="margin-top:20px; width: 100%;">
+            <source class="no-animate" src="./assets/build 1.mp4" type="video/mp4">
+          </video>
+          <video class="hidden no-animate" controls style="margin-top:20px; width: 100%;">
+            <source class="no-animate" src="./assets/build 2.mp4" type="video/mp4">
+          </video>
         </div>
       </Panel>
     </div>
