@@ -23,9 +23,9 @@ export default {
   methods: {
     imgOnload () {
       this.loadedImages += 1
-      if (this.images && this.loadedImages === this.images) this.addToAnimate()
+      if (this.images && this.loadedImages === this.images) this.addToAnimate(true)
     },
-    addToAnimate () {
+    addToAnimate (hasImage) {
       const bounding = this.$el.getBoundingClientRect()
       const {width, height} = bounding
       const objectsToAnimate = []
@@ -39,7 +39,7 @@ export default {
         objectsToAnimate.push({elem})
       })
 
-      panels.push({
+      panels[hasImage ? 'unshift' : 'push']({
         el: this.$el,
         objectsToAnimate
       })
@@ -59,48 +59,45 @@ function animate () {
   if (elapsed > fpsInterval) {
     then = now - (elapsed % fpsInterval)
 
-    panels.forEach((panel) => {
-      if (!isInViewport(panel.el)) return
+    const panel = panels.find((panel) => isInViewport(panel.el) && !panel.finishedAnimating)
+    if (!panel) return
 
-      const unfinished = panel.objectsToAnimate.filter((obj) => obj.elem.innerHTML !== obj.elem.getAttribute('val'))
-    
-      if (!unfinished || unfinished.length === 0) {
-        if (panel.el.style.width !== '') panel.el.style.width = ''
-        if (panel.el.style.height !== '') {
-          panel.el.style.height = ''
-          panel.el.querySelectorAll('.hidden').forEach((hiddenEl) => {
-            hiddenEl.classList.remove('hidden')
-          })
-        }
-        return
+    const unfinished = panel.objectsToAnimate.filter((obj) => obj.elem.innerHTML !== obj.elem.getAttribute('val'))
+  
+    if (!unfinished || unfinished.length === 0) {
+      if (panel.el.style.width !== '') panel.el.style.width = ''
+      if (panel.el.style.height !== '') {
+        panel.el.style.height = ''
+        panel.el.querySelectorAll('.hidden').forEach((hiddenEl) => {
+          hiddenEl.classList.remove('hidden')
+        })
+        panel.finishedAnimating = true
+      }
+      return
+    }
+
+    unfinished.forEach((obj) => {
+      const currentVal = obj.elem.innerHTML
+      const originalVal = obj.elem.getAttribute('val')
+
+      if (obj.randomLetterCount === undefined) {
+        obj.randomLetterCount = originalVal.length <= 10
+          ? 4 : originalVal.length <= 30
+          ? 3 : 2
       }
 
-      unfinished.forEach((obj) => {
-        const currentVal = obj.elem.innerHTML
-        const originalVal = obj.elem.getAttribute('val')
-
-        if (obj.randomLetterCount === undefined) {
-          obj.randomLetterCount = originalVal.length <= 10
-            ? 6 : originalVal.length <= 30
-            ? 5 : originalVal.length <= 50
-            ? 4 : originalVal.length <= 70
-            ? 3 : originalVal.length <= 90
-            ? 2 : 1
-        }
-
-        if (!obj.lettersQueue) {
-          obj.lettersQueue = [...getRandom(letters, obj.randomLetterCount), originalVal.charAt(currentVal.length)]
-        } else if (Array.isArray(obj.lettersQueue)) {
-          if (obj.lettersQueue.length === obj.randomLetterCount + 1)
-            obj.elem.innerHTML += obj.lettersQueue.shift()
-          if (obj.lettersQueue.length > 0)
-            obj.elem.innerHTML = obj.elem.innerHTML !== ''
-              ? obj.elem.innerHTML.replace(/(\s|\S)$/, obj.lettersQueue.shift())
-              : obj.lettersQueue.shift()
-          else
-            delete obj.lettersQueue
-        }
-      })
+      if (!obj.lettersQueue) {
+        obj.lettersQueue = [...getRandom(letters, obj.randomLetterCount), originalVal.charAt(currentVal.length)]
+      } else if (Array.isArray(obj.lettersQueue)) {
+        if (obj.lettersQueue.length === obj.randomLetterCount + 1)
+          obj.elem.innerHTML += obj.lettersQueue.shift()
+        if (obj.lettersQueue.length > 0)
+          obj.elem.innerHTML = obj.elem.innerHTML !== ''
+            ? obj.elem.innerHTML.replace(/(\s|\S)$/, obj.lettersQueue.shift())
+            : obj.lettersQueue.shift()
+        else
+          delete obj.lettersQueue
+      }
     })
   }
 }
