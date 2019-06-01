@@ -134,8 +134,8 @@ function isInViewport (elem) {
   margin: 10px 20px !important;
   padding: 20px;
   box-sizing: border-box;
-  background: rgba(#000411, 0.3);
+  background: rgba(#000411, 0.5);
   box-shadow: 0px 0px 2px #fff;
-  text-shadow: 0px 0px 20px rgba(#fff, 0.8);
+  text-shadow: 0px 0px 15px rgba(#fff, 0.8);
 }
 </style>
