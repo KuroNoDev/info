@@ -1,5 +1,5 @@
 <template>
-  <div class="Panel">
+  <div class="Panel waiting">
     <slot v-bind:imgOnload="imgOnload"></slot>
   </div>
 </template>
@@ -32,6 +32,7 @@ export default {
       
       this.$el.style.width = `${width}px`
       this.$el.style.height = `${height}px`
+      this.$el.classList.remove('waiting')
 
       Array.from(this.$el.querySelectorAll('*:not(.no-animate)')).forEach((elem) => {
         elem.setAttribute('val', elem.innerHTML)
@@ -134,5 +135,9 @@ function isInViewport (elem) {
   background: rgba(#000411, 0.5);
   box-shadow: 0px 0px 2px #fff;
   text-shadow: 0px 0px 15px rgba(#fff, 0.8);
+
+  &.waiting {
+    color: transparent; 
+  }
 }
 </style>
