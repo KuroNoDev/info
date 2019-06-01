@@ -18,6 +18,7 @@
             <h4>A frontend developer that can operate without getting energy from coffee</h4>
             <h4>Rumors say that he lives in a swamp</h4>
             <h4>Current whereabouts is unknown</h4>
+            <h4>Reports claim that he can be contacted via kuronogiasu@gmail.com</h4>
           </div>
         </div>
       </Panel>
@@ -27,6 +28,19 @@
         <h3>Role: Frontend Team Leader</h3>
         <h4>Date joined: November 2014</h4>
         <h4>Last seen: May 2019</h4>
+      </Panel>
+    </div>
+    <div class="row">
+      <Panel>
+        <h1>EDUCATION AND TRAININGS</h1>
+        <h3>Don Honorio Ventura Technological State University</h3>
+        <h4>Bachelor of Science in Information Technology</h4>
+        <br>
+        <h3>Singapore</h3>
+        <h4>JSConf Asia 2018</h4>
+        <br>
+        <h3>Manila</h3>
+        <h4>GDG DevFest Philippines 2018</h4>
       </Panel>
       <Panel>
         <h1>PUBLIC SIGHTINGS</h1>
@@ -62,6 +76,9 @@
         <h3>A tower defense game</h3>
         <h3>Participants must place their towers on the most efficient position</h3>
         <h3>Technologies: Node.js, Javascript, Websockets</h3>
+        <video class="hidden no-animate" controls style="margin-top:20px; width: 100%;">
+          <source class="no-animate" src="./assets/towers.mp4" type="video/mp4">
+        </video>
       </Panel>
     </div>
     <div class="row">
@@ -70,7 +87,7 @@
         <h3>A civilization-esque game</h3>
         <h3>Participants must build their own civilization with the fastest strategy</h3>
         <h3>Technologies: Node.js, Javascript</h3>
-        <video class="hidden no-animate" controls style="margin-top:20px;">
+        <video class="hidden no-animate" controls style="margin-top:20px; width: 100%;">
           <source class="no-animate" src="./assets/torociv.mp4" type="video/mp4">
         </video>
       </Panel>
