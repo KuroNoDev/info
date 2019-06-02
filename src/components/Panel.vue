@@ -129,7 +129,7 @@ function isInViewport (elem) {
 .Panel {
   display: flex;
   flex-direction: column;
-  margin: 10px 20px !important;
+  margin: 20px !important;
   padding: 20px;
   box-sizing: border-box;
   background: rgba(#000411, 0.5);

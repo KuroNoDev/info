@@ -30,7 +30,7 @@
         <h4>Last seen: May 2019</h4>
       </Panel>
     </div>
-    <div class="row">
+    <div class="row" style="margin: 0 !important;">
       <Panel>
         <h1>EDUCATION AND TRAININGS</h1>
         <h3>Don Honorio Ventura Technological State University</h3>
