@@ -7,8 +7,8 @@
       <Panel v-slot="slotProps" :images="1">
         <h1>IDENTITY</h1>
         <div class="no-animate" style="display: flex;">
-          <div class="no-animate" style="width: 150px; margin-right: 10px;">
-            <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/avatar.png" style="display: block; width: 100%;">
+          <div class="no-animate" style="margin-right: 20px; width: 162px;">
+            <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/me.jpg" style="display: block; width: 100%;">
           </div>
           <div class="no-animate" style="display: flex; flex-direction: column;">
             <h3>Fullname: Mykel Ray Perez</h3>
