@@ -16,7 +16,7 @@ let now, elapsed
 animate()
 
 export default {
-  props: ['images'],
+  props: ['images', 'priority'],
   created () {
     this.loadedImages = 0
   },
@@ -40,7 +40,9 @@ export default {
         objectsToAnimate.push({elem})
       })
 
-      panels[hasImage ? 'unshift' : 'push']({
+      console.log(this.priority)
+
+      panels[this.priority !== undefined && hasImage ? 'unshift' : 'push']({
         el: this.$el,
         objectsToAnimate
       })

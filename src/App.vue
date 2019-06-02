@@ -4,7 +4,7 @@
       <h1>Public Info</h1>
     </div>
     <div class="row">
-      <Panel v-slot="slotProps" :images="1">
+      <Panel v-slot="slotProps" :images="1" :priority="0">
         <h1>IDENTITY</h1>
         <div class="no-animate" style="display: flex;">
           <div class="no-animate" style="margin-right: 20px; width: 162px;">
@@ -15,49 +15,68 @@
             <h3>Alias: MYKE</h3>
             <h3>Age: 23</h3>
             <br class="no-animate">
-            <h4>A frontend developer that can operate without getting energy from coffee</h4>
-            <h4>Rumors say that he lives in a swamp</h4>
-            <h4>Current whereabouts is unknown</h4>
-            <h4>Reports claim that he can be contacted via kuronogiasu@gmail.com</h4>
+            <h4>Occupation: Web Developer</h4>
+            <h4>Email Address: kuronogiasu@gmail.com</h4>
           </div>
         </div>
       </Panel>
-      <Panel>
+      <Panel v-slot="slotProps" :images="1">
         <h1>AFFILIATIONS</h1>
-        <h3>TORO Limited</h3>
-        <h3>Role: Frontend Team Leader</h3>
-        <h4>Date joined: November 2014</h4>
-        <h4>Last seen: May 2019</h4>
+        <div class="no-animate" style="display: flex;">
+          <div class="no-animate" style="margin-left: -15px; width: 162px;">
+            <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/affiliates.svg" style="display: block; width: 100%;">
+          </div>
+          <div class="no-animate" style="display: flex; flex-direction: column;">
+            <h3>TORO Limited</h3>
+            <h3>Role: Frontend Team Leader</h3>
+            <h4>Date joined: November 2014</h4>
+            <h4>Last seen: May 2019</h4>
+          </div>
+        </div>
       </Panel>
     </div>
     <div class="row" style="margin: 0 !important;">
-      <Panel>
+      <Panel v-slot="slotProps" :images="1">
         <h1>EDUCATION AND TRAININGS</h1>
-        <h3>Don Honorio Ventura Technological State University</h3>
-        <h4>Bachelor of Science in Information Technology</h4>
-        <br>
-        <h3>Singapore</h3>
-        <h4>JSConf Asia 2018</h4>
-        <br>
-        <h3>Manila</h3>
-        <h4>GDG DevFest Philippines 2018</h4>
+        <div class="no-animate" style="display: flex;">
+          <div class="no-animate" style="margin-left: -20px; width: 162px;">
+            <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/education.svg" style="display: block; width: 100%;">
+          </div>
+          <div class="no-animate" style="display: flex; flex-direction: column;">
+            <h3>Don Honorio Ventura Technological State University</h3>
+            <h4>Bachelor of Science in Information Technology</h4>
+            <br>
+            <h3>Singapore</h3>
+            <h4>JSConf Asia 2018</h4>
+            <br>
+            <h3>Manila</h3>
+            <h4>GDG DevFest Philippines 2018</h4>
+          </div>
+        </div>
       </Panel>
-      <Panel>
+      <Panel v-slot="slotProps" :images="1">
         <h1>PUBLIC SIGHTINGS</h1>
-        <h3>Location: Holy Angel University</h3>
-        <h4>Operation: Hackathon</h4>
-        <h3>Date: March 2016</h3>
-        <h4>Role: Speaker and Facilitator</h4>
-        <br>
-        <h3>Location: Angeles University Foundation</h3>
-        <h4>Operation: Basic Web Development Seminar</h4>
-        <h3>Date: August 2016</h3>
-        <h4>Role: Resource Speaker</h4>
-        <br>
-        <h3>Location: PSITE Region 3</h3>
-        <h4>Operation: Conference and Hackathon</h4>
-        <h3>Date: September 2017</h3>
-        <h4>Role: Speaker and Facilitator</h4>
+        <div class="no-animate" style="display: flex;">
+          <div class="no-animate" style="margin-right: 20px; margin-top: -15px; width: 162px;">
+            <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/public.svg" style="display: block; width: 100%;">
+          </div>
+          <div class="no-animate" style="display: flex; flex-direction: column;">
+            <h3>Location: Holy Angel University</h3>
+            <h4>Operation: Hackathon</h4>
+            <h3>Date: March 2016</h3>
+            <h4>Role: Speaker and Facilitator</h4>
+            <br>
+            <h3>Location: Angeles University Foundation</h3>
+            <h4>Operation: Basic Web Development Seminar</h4>
+            <h3>Date: August 2016</h3>
+            <h4>Role: Resource Speaker</h4>
+            <br>
+            <h3>Location: PSITE Region 3</h3>
+            <h4>Operation: Conference and Hackathon</h4>
+            <h3>Date: September 2017</h3>
+            <h4>Role: Speaker and Facilitator</h4>
+          </div>
+        </div>
       </Panel>
     </div>
     <div class="row" style="flex-direction: column; align-items: center;">
@@ -168,7 +187,7 @@ html {
   }
 
   h1 {
-    margin: 0 0 10px 0;
+    margin: 0 0 10px -7px;
   }
 
   h1::before {
