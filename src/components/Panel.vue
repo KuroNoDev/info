@@ -40,8 +40,6 @@ export default {
         objectsToAnimate.push({elem})
       })
 
-      console.log(this.priority)
-
       panels[this.priority !== undefined && hasImage ? 'unshift' : 'push']({
         el: this.$el,
         objectsToAnimate

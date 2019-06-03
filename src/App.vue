@@ -7,7 +7,7 @@
       <Panel v-slot="slotProps" :images="1" :priority="0">
         <h1>IDENTITY</h1>
         <div class="no-animate" style="display: flex;">
-          <div class="no-animate" style="margin-right: 20px; width: 162px;">
+          <div class="no-animate" style="margin-right: 20px; width: 150px;">
             <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/me.jpg" style="display: block; width: 100%;">
           </div>
           <div class="no-animate" style="display: flex; flex-direction: column;">
@@ -23,7 +23,7 @@
       <Panel v-slot="slotProps" :images="1">
         <h1>AFFILIATIONS</h1>
         <div class="no-animate" style="display: flex;">
-          <div class="no-animate" style="margin-left: -15px; width: 162px;">
+          <div class="no-animate" style="margin-left: -15px; width: 150px;">
             <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/affiliates.svg" style="display: block; width: 100%;">
           </div>
           <div class="no-animate" style="display: flex; flex-direction: column;">
@@ -39,7 +39,7 @@
       <Panel v-slot="slotProps" :images="1">
         <h1>EDUCATION AND TRAININGS</h1>
         <div class="no-animate" style="display: flex;">
-          <div class="no-animate" style="margin-left: -20px; width: 162px;">
+          <div class="no-animate" style="margin-left: -9px; width: 150px;">
             <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/education.svg" style="display: block; width: 100%;">
           </div>
           <div class="no-animate" style="display: flex; flex-direction: column;">
@@ -57,7 +57,7 @@
       <Panel v-slot="slotProps" :images="1">
         <h1>PUBLIC SIGHTINGS</h1>
         <div class="no-animate" style="display: flex;">
-          <div class="no-animate" style="margin-right: 20px; margin-top: -15px; width: 162px;">
+          <div class="no-animate" style="margin-right: 20px; width: 150px;">
             <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/public.svg" style="display: block; width: 100%;">
           </div>
           <div class="no-animate" style="display: flex; flex-direction: column;">
