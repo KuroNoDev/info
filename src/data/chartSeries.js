@@ -18,6 +18,9 @@ export default [{
     x: 'AngularJS',
     y: [new Date('2015-04-15').getTime(), today]
   }, {
+    x: 'ES6',
+    y: [new Date('2015-04-15').getTime(), today]
+  }, {
     x: 'Node.js',
     y: [new Date('2016-01-15').getTime(), today]
   }, {
@@ -33,10 +36,10 @@ export default [{
     x: 'Git',
     y: [new Date('2016-04-15').getTime(), today]
   }, {
-    x: 'Angular',
-    y: [new Date('2017-01-11').getTime(), new Date('2017-03-12').getTime()]
+    x: 'Flexbox',
+    y: [new Date('2016-04-15').getTime(), today]
   }, {
-    x: 'ES6',
+    x: 'Angular',
     y: [new Date('2017-01-11').getTime(), new Date('2017-03-12').getTime()]
   }, {
     x: 'mySQL',
