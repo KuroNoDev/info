@@ -12,7 +12,6 @@
           </div>
           <div class="no-animate" style="display: flex; flex-direction: column;">
             <h3>Fullname: Mykel Ray Perez</h3>
-            <h3>Alias: MYKE</h3>
             <h3>Age: 23</h3>
             <br class="no-animate">
             <h4>Occupation: Web Developer</h4>
