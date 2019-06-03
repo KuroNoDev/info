@@ -81,7 +81,7 @@
     </div>
     <div class="row" style="flex-direction: column; align-items: center;">
       <h1>Power Levels</h1>
-      <h3>Warning: Because power levels are hard to calculate, what you'll see below is the subject's time spent with each ability</h3>
+      <h3>Warning: Because power levels are hard to calculate, what you'll see below is the subject's time spent with each skill</h3>
     </div>
     <div class="row">
       <apexchart width="600" height="500" type="rangeBar" :options="options" :series="series"></apexchart>
@@ -211,6 +211,11 @@ a {
 }
 
 .hidden {
-  display: none !important;
+  width: 0 !important;
+  transition: all .5s;
+}
+
+.unhidden {
+  width: 100% !important;
 }
 </style>

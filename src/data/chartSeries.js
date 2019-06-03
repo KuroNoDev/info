@@ -1,7 +1,7 @@
 const today = Date.now()
 
 export default [{
-  name: 'Time Spent',
+  name: '',
   data: [{
     x: 'PHP',
     y: [new Date('2013-02-02').getTime(), new Date('2014-06-06').getTime()]

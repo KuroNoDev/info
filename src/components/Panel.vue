@@ -70,7 +70,7 @@ function animate () {
       if (panel.el.style.height !== '') {
         panel.el.style.height = ''
         panel.el.querySelectorAll('.hidden').forEach((hiddenEl) => {
-          hiddenEl.classList.remove('hidden')
+          hiddenEl.classList.add('unhidden')
         })
         panel.finishedAnimating = true
       }
