@@ -3,7 +3,7 @@
     <div class="row">
       <h1>Public Info</h1>
     </div>
-    <div class="row">
+    <div class="row" style="align-items: stretch;">
       <Panel v-slot="slotProps" :images="1" :priority="0">
         <h1>IDENTITY</h1>
         <div class="no-animate" style="display: flex;">
@@ -26,10 +26,14 @@
             <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/affiliates.svg" style="display: block; width: 100%;">
           </div>
           <div class="no-animate" style="display: flex; flex-direction: column;">
-            <h3>TORO Limited</h3>
+            <h3>TORO Cloud</h3>
             <h3>Role: Frontend Team Leader</h3>
             <h4>Date joined: November 2014</h4>
             <h4>Last seen: May 2019</h4>
+            <br class="no-animate">
+            <h3>GenericMedia</h3>
+            <h3>Role: Frontend Developer</h3>
+            <h4>Date joined: September 2018</h4>
           </div>
         </div>
       </Panel>

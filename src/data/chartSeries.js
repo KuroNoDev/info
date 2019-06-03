@@ -36,6 +36,9 @@ export default [{
     x: 'Angular',
     y: [new Date('2017-01-11').getTime(), new Date('2017-03-12').getTime()]
   }, {
+    x: 'ES6',
+    y: [new Date('2017-01-11').getTime(), new Date('2017-03-12').getTime()]
+  }, {
     x: 'mySQL',
     y: [new Date('2017-02-15').getTime(), new Date('2017-04-15').getTime()]
   }, {
@@ -52,6 +55,9 @@ export default [{
     y: [new Date('2019-04-11').getTime(), today]
   }, {
     x: 'Vue.js',
+    y: [new Date('2019-05-11').getTime(), today]
+  }, {
+    x: 'TypeScript',
     y: [new Date('2019-05-11').getTime(), today]
   }]
 }]
