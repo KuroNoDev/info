@@ -15,7 +15,7 @@
               <h3>Fullname: Mykel Ray Perez</h3>
               <h3>Age: 23</h3>
               <br class="no-animate">
-              <h4>Occupation: Web Developer</h4>
+              <h4>Occupation: Frontend Developer</h4>
               <h4>Email Address: kuronogiasu@gmail.com</h4>
             </div>
           </div>
