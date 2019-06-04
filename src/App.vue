@@ -158,7 +158,10 @@
         <h1>Baccarat</h1>
         <h3>German/Japanese Website</h3>
         <h3 class="no-animate">
-          <a href="https://www.baccarat.com.de/" target="blank">visit DE site</a> or <a href="https://www.baccarat.com.de/jp/" target="blank">visit JP site</a>
+          <a href="https://www.baccarat.com.de/" target="blank">visit DE site</a>
+        </h3>
+        <h3 class="no-animate">
+          <a href="https://www.baccarat.com.de/jp/" target="blank">visit JP site</a>
         </h3>
         <h3>Technologies: Jekyll</h3>
       </Panel>

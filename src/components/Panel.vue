@@ -69,8 +69,13 @@ function animate () {
       if (panel.el.style.width !== '') panel.el.style.width = ''
       if (panel.el.style.height !== '') {
         panel.el.style.height = ''
-        panel.el.querySelectorAll('.hidden').forEach((hiddenEl) => {
+        panel.el.querySelectorAll('.hidden').forEach((hiddenEl, index) => {
           hiddenEl.classList.add('unhidden')
+          if (index === 0) {
+            setTimeout(() => {
+              panel.el.scrollIntoView({behavior: "smooth"})
+            }, 500)
+          }
         })
         panel.finishedAnimating = true
       }
