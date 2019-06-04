@@ -1,3 +1,4 @@
+import chartSeries from './chartSeries'
 const today = Date.now()
 
 export default {
@@ -24,14 +25,27 @@ export default {
     }
   },
   tooltip: {
-    followCursor: true,
-    intersect: true,
     style: {
       fontSize: '1rem',
       fontFamily: 'Share Tech Mono, monospace',
       color: '#fff'
     },
-    theme: 'dark'
+    theme: 'dark',
+    custom ({dataPointIndex}) {
+      const item = chartSeries[0].data[dataPointIndex]
+      let diff = (item.y[1] - item.y[0]) / 1000
+      diff /= (60 * 60 * 24)
+      diff /= 365.25
+      return `<div style="padding: 5px;">${item.x}: ${diff.toFixed(2)} years</div>`
+    }
+    // x: {
+    //   show: true,
+    //   format: 'dd MMM',
+    //   formatter (value, timestamp) {
+    //     console.log(value, timestamp)
+    //     return value
+    //   }
+    // }
   },
   yaxis: {
     min: new Date('2013-02-02').getTime(),

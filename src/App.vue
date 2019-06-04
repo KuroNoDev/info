@@ -93,6 +93,7 @@
     <div class="row" style="flex-direction: column; align-items: center;">
       <h1>Skill Levels</h1>
       <h3>Because skill levels can be biased, what you'll see below is the my time spent with each skill</h3>
+      <h4>Hover on a skill to view my approximate years spent on it</h4>
     </div>
     <div class="row">
       <apexchart width="600" height="500" type="rangeBar" :options="options" :series="series"></apexchart>

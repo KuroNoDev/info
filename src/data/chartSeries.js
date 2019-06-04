@@ -12,6 +12,9 @@ export default [{
     x: 'jQuery',
     y: [new Date('2014-11-02').getTime(), today]
   }, {
+    x: 'Agile',
+    y: [new Date('2014-12-02').getTime(), today, new Date('2019-05-17').getTime()]
+  }, {
     x: 'SCSS',
     y: [new Date('2014-12-02').getTime(), today]
   }, {

@@ -74,7 +74,7 @@ function animate () {
           if (index === 0) {
             setTimeout(() => {
               panel.el.scrollIntoView({behavior: "smooth"})
-            }, 500)
+            }, 300)
           }
         })
         panel.finishedAnimating = true
