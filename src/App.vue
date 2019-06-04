@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="row">
-      <h1>Public Info</h1>
+      <h1>Personal Information</h1>
     </div>
     <div class="row" style="align-items: stretch;">
       <div class="right">
