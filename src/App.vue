@@ -4,83 +4,91 @@
       <h1>Public Info</h1>
     </div>
     <div class="row" style="align-items: stretch;">
-      <Panel v-slot="slotProps" :images="1" :priority="0">
-        <h1>IDENTITY</h1>
-        <div class="no-animate" style="display: flex;">
-          <div class="no-animate" style="margin-right: 20px; width: 150px;">
-            <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/me.jpg" style="display: block; width: 100%;">
+      <div class="right">
+        <Panel v-slot="slotProps" :images="1" :priority="0">
+          <h1>IDENTITY</h1>
+          <div class="no-animate" style="display: flex;">
+            <div class="no-animate" style="margin-right: 20px; width: 150px;">
+              <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/me.jpg" style="display: block; width: 100%;">
+            </div>
+            <div class="no-animate" style="display: flex; flex-direction: column;">
+              <h3>Fullname: Mykel Ray Perez</h3>
+              <h3>Age: 23</h3>
+              <br class="no-animate">
+              <h4>Occupation: Web Developer</h4>
+              <h4>Email Address: kuronogiasu@gmail.com</h4>
+            </div>
           </div>
-          <div class="no-animate" style="display: flex; flex-direction: column;">
-            <h3>Fullname: Mykel Ray Perez</h3>
-            <h3>Age: 23</h3>
-            <br class="no-animate">
-            <h4>Occupation: Web Developer</h4>
-            <h4>Email Address: kuronogiasu@gmail.com</h4>
+        </Panel>
+      </div>
+      <div class="left">
+        <Panel v-slot="slotProps" :images="1">
+          <h1>AFFILIATIONS</h1>
+          <div class="no-animate" style="display: flex;">
+            <div class="no-animate" style="margin-left: -15px; width: 150px;">
+              <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/affiliates.svg" style="display: block; width: 100%;">
+            </div>
+            <div class="no-animate" style="display: flex; flex-direction: column;">
+              <h3>TORO Cloud</h3>
+              <h3>Role: Frontend Team Leader</h3>
+              <h4>Date joined: November 2014</h4>
+              <h4>Last seen: May 2019</h4>
+              <br class="no-animate">
+              <h3>GenericMedia</h3>
+              <h3>Role: Frontend Developer</h3>
+              <h4>Date joined: September 2018</h4>
+            </div>
           </div>
-        </div>
-      </Panel>
-      <Panel v-slot="slotProps" :images="1">
-        <h1>AFFILIATIONS</h1>
-        <div class="no-animate" style="display: flex;">
-          <div class="no-animate" style="margin-left: -15px; width: 150px;">
-            <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/affiliates.svg" style="display: block; width: 100%;">
-          </div>
-          <div class="no-animate" style="display: flex; flex-direction: column;">
-            <h3>TORO Cloud</h3>
-            <h3>Role: Frontend Team Leader</h3>
-            <h4>Date joined: November 2014</h4>
-            <h4>Last seen: May 2019</h4>
-            <br class="no-animate">
-            <h3>GenericMedia</h3>
-            <h3>Role: Frontend Developer</h3>
-            <h4>Date joined: September 2018</h4>
-          </div>
-        </div>
-      </Panel>
+        </Panel>
+      </div>
     </div>
     <div class="row" style="margin: 0 !important;">
-      <Panel v-slot="slotProps" :images="1">
-        <h1>EDUCATION AND TRAININGS</h1>
-        <div class="no-animate" style="display: flex;">
-          <div class="no-animate" style="margin-left: -9px; width: 150px;">
-            <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/education.svg" style="display: block; width: 100%;">
+      <div class="right">
+        <Panel v-slot="slotProps" :images="1">
+          <h1>EDUCATION AND TRAININGS</h1>
+          <div class="no-animate" style="display: flex;">
+            <div class="no-animate" style="margin-left: -21px; width: 150px;">
+              <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/education.svg" style="display: block; width: 100%;">
+            </div>
+            <div class="no-animate" style="display: flex; flex-direction: column;">
+              <h3>Don Honorio Ventura Technological State University</h3>
+              <h4>Bachelor of Science in Information Technology</h4>
+              <br>
+              <h3>Singapore</h3>
+              <h4>JSConf Asia 2018</h4>
+              <br>
+              <h3>Manila</h3>
+              <h4>GDG DevFest Philippines 2018</h4>
+            </div>
           </div>
-          <div class="no-animate" style="display: flex; flex-direction: column;">
-            <h3>Don Honorio Ventura Technological State University</h3>
-            <h4>Bachelor of Science in Information Technology</h4>
-            <br>
-            <h3>Singapore</h3>
-            <h4>JSConf Asia 2018</h4>
-            <br>
-            <h3>Manila</h3>
-            <h4>GDG DevFest Philippines 2018</h4>
+        </Panel>
+      </div>
+      <div class="left">
+        <Panel v-slot="slotProps" :images="1">
+          <h1>PUBLIC SIGHTINGS</h1>
+          <div class="no-animate" style="display: flex;">
+            <div class="no-animate" style="margin-right: 20px;">
+              <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/public.svg" style="display: block; width: 115px; height: 150px;">
+            </div>
+            <div class="no-animate" style="display: flex; flex-direction: column;">
+              <h3>Location: Holy Angel University</h3>
+              <h4>Operation: Hackathon</h4>
+              <h3>Date: March 2016</h3>
+              <h4>Role: Speaker and Facilitator</h4>
+              <br>
+              <h3>Location: Angeles University Foundation</h3>
+              <h4>Operation: Basic Web Development Seminar</h4>
+              <h3>Date: August 2016</h3>
+              <h4>Role: Resource Speaker</h4>
+              <br>
+              <h3>Location: PSITE Region 3</h3>
+              <h4>Operation: Conference and Hackathon</h4>
+              <h3>Date: September 2017</h3>
+              <h4>Role: Speaker and Facilitator</h4>
+            </div>
           </div>
-        </div>
-      </Panel>
-      <Panel v-slot="slotProps" :images="1">
-        <h1>PUBLIC SIGHTINGS</h1>
-        <div class="no-animate" style="display: flex;">
-          <div class="no-animate" style="margin-right: 20px; width: 150px;">
-            <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/public.svg" style="display: block; width: 100%;">
-          </div>
-          <div class="no-animate" style="display: flex; flex-direction: column;">
-            <h3>Location: Holy Angel University</h3>
-            <h4>Operation: Hackathon</h4>
-            <h3>Date: March 2016</h3>
-            <h4>Role: Speaker and Facilitator</h4>
-            <br>
-            <h3>Location: Angeles University Foundation</h3>
-            <h4>Operation: Basic Web Development Seminar</h4>
-            <h3>Date: August 2016</h3>
-            <h4>Role: Resource Speaker</h4>
-            <br>
-            <h3>Location: PSITE Region 3</h3>
-            <h4>Operation: Conference and Hackathon</h4>
-            <h3>Date: September 2017</h3>
-            <h4>Role: Speaker and Facilitator</h4>
-          </div>
-        </div>
-      </Panel>
+        </Panel>
+      </div>
     </div>
     <div class="row" style="flex-direction: column; align-items: center;">
       <h1>Power Levels</h1>
@@ -98,7 +106,7 @@
         <h3>A tower defense game</h3>
         <h3>Participants must place their towers on the most efficient position</h3>
         <h3>Technologies: Node.js, Javascript, Websockets</h3>
-        <video class="hidden no-animate" controls style="margin-top:20px; width: 100%;">
+        <video class="video hidden no-animate" controls>
           <source class="no-animate" src="./assets/towers.mp4" type="video/mp4">
         </video>
       </Panel>
@@ -109,7 +117,7 @@
         <h3>A civilization-esque game</h3>
         <h3>Participants must build their own civilization with the fastest strategy</h3>
         <h3>Technologies: Node.js, Javascript</h3>
-        <video class="hidden no-animate" controls style="margin-top:20px; width: 100%;">
+        <video class="video hidden no-animate" controls>
           <source class="no-animate" src="./assets/torociv.mp4" type="video/mp4">
         </video>
       </Panel>
@@ -130,10 +138,10 @@
         <h3>A web based SPA builder</h3>
         <h3>Technologies: Node.js, ES6, AnguarJS</h3>
         <div class="hidden no-animate" style="display: flex; flex-direction: column;">
-          <video class="hidden no-animate" controls style="margin-top:20px; width: 100%;">
+          <video class="video hidden no-animate" controls>
             <source class="no-animate" src="./assets/build 1.mp4" type="video/mp4">
           </video>
-          <video class="hidden no-animate" controls style="margin-top:20px; width: 100%;">
+          <video class="video hidden no-animate" controls>
             <source class="no-animate" src="./assets/build 2.mp4" type="video/mp4">
           </video>
         </div>
@@ -209,16 +217,35 @@ html {
   margin-top: 50px !important;
 }
 
+.right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.video {
+  margin-top: 20px !important;
+  max-width: 900px;
+}
+
 a {
   color: #fff;
 }
 
 .hidden {
   width: 0 !important;
+  opacity: 0;
   transition: all .5s;
 }
 
 .unhidden {
   width: 100% !important;
+  opacity: 1;
 }
 </style>
