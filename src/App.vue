@@ -146,6 +146,22 @@
         </h3>
         <h3>Technologies: Node.js, Websockets, ES6, AnguarJS</h3>
       </Panel>
+      <Panel>
+        <h1>SlotGratisGallina</h1>
+        <h3>Italian Website</h3>
+        <h3 class="no-animate">
+          <a href="https://slotgratisgallina.it" target="blank">visit IT site</a>
+        </h3>
+        <h3>Technologies: Jekyll</h3>
+      </Panel>
+      <Panel>
+        <h1>Baccarat</h1>
+        <h3>German/Japanese Website</h3>
+        <h3 class="no-animate">
+          <a href="https://www.baccarat.com.de/" target="blank">visit DE site</a> or <a href="https://www.baccarat.com.de/jp/" target="blank">visit JP site</a>
+        </h3>
+        <h3>Technologies: Jekyll</h3>
+      </Panel>
     </div>
   </div>
 </template>
