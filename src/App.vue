@@ -6,7 +6,7 @@
     <div class="row" style="align-items: stretch;">
       <div class="right">
         <Panel v-slot="slotProps" :images="1" :priority="0">
-          <h1>IDENTITY</h1>
+          <h1>PROFILE</h1>
           <div class="no-animate" style="display: flex;">
             <div class="no-animate" style="margin-right: 20px; width: 150px;">
               <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/me.jpg" style="display: block; width: 100%;">
@@ -65,7 +65,7 @@
       </div>
       <div class="left">
         <Panel v-slot="slotProps" :images="1">
-          <h1>PUBLIC SIGHTINGS</h1>
+          <h1>PUBLIC APPEARANCES</h1>
           <div class="no-animate" style="display: flex;">
             <div class="no-animate" style="margin-right: 20px;">
               <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/public.svg" style="display: block; width: 115px; height: 150px;">
@@ -102,6 +102,21 @@
     </div>
     <div class="row">
       <Panel>
+        <h1>TORO Build</h1>
+        <h3>A web based SPA builder</h3>
+        <h3>Technologies: Node.js, ES6, AnguarJS</h3>
+        <div class="hidden no-animate" style="display: flex; flex-direction: column;">
+          <video class="video hidden no-animate" controls>
+            <source class="no-animate" src="./assets/build 1.mp4" type="video/mp4">
+          </video>
+          <video class="video hidden no-animate" controls>
+            <source class="no-animate" src="./assets/build 2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </Panel>
+    </div>
+    <div class="row">
+      <Panel>
         <h1>TORO IT Elite 2018 Championship - TORO Towers</h1>
         <h3>A tower defense game</h3>
         <h3>Participants must place their towers on the most efficient position</h3>
@@ -130,21 +145,6 @@
           <a href="https://www.torocloud.com/toro-integrate/developing" target="blank">more info</a>
         </h3>
         <h3>Technologies: Node.js, Websockets, ES6, AnguarJS</h3>
-      </Panel>
-    </div>
-    <div class="row">
-      <Panel>
-        <h1>TORO Build</h1>
-        <h3>A web based SPA builder</h3>
-        <h3>Technologies: Node.js, ES6, AnguarJS</h3>
-        <div class="hidden no-animate" style="display: flex; flex-direction: column;">
-          <video class="video hidden no-animate" controls>
-            <source class="no-animate" src="./assets/build 1.mp4" type="video/mp4">
-          </video>
-          <video class="video hidden no-animate" controls>
-            <source class="no-animate" src="./assets/build 2.mp4" type="video/mp4">
-          </video>
-        </div>
       </Panel>
     </div>
   </div>
