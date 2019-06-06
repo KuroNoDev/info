@@ -19,7 +19,7 @@ export default [{
     y: [new Date('2014-12-02').getTime(), today]
   }, {
     x: 'AngularJS',
-    y: [new Date('2015-04-15').getTime(), today]
+    y: [new Date('2015-04-15').getTime(), today, new Date('2019-05-17').getTime()]
   }, {
     x: 'ES6',
     y: [new Date('2015-04-15').getTime(), today]
@@ -50,6 +50,9 @@ export default [{
   }, {
     x: 'ReactJS',
     y: [new Date('2017-07-11').getTime(), new Date('2017-08-11').getTime()]
+  }, {
+    x: 'ReactJS',
+    y: [new Date('2019-05-18').getTime(), today]
   }, {
     x: 'MongoDB',
     y: [new Date('2018-03-11').getTime(), new Date('2019-05-17').getTime()]
