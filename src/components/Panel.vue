@@ -8,7 +8,7 @@
 const letters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'.split('')
 const panels = []
 let stop = false
-let fpsInterval = 1000 / 144
+let fpsInterval = 1000 / 60
 let then = Date.now()
 let startTime = then
 let now, elapsed
