@@ -31,12 +31,11 @@
             <div class="no-animate" style="display: flex; flex-direction: column;">
               <h3>TORO Cloud</h3>
               <h3>Role: Frontend Team Leader</h3>
-              <h4>Date joined: November 2014</h4>
-              <h4>Last seen: May 2019</h4>
+              <h4>November 2014 - May 2019</h4>
               <br class="no-animate">
               <h3>GenericMedia</h3>
               <h3>Role: Frontend Developer</h3>
-              <h4>Date joined: September 2018</h4>
+              <h4>September 2018 - present</h4>
             </div>
           </div>
         </Panel>
