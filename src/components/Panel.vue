@@ -71,11 +71,6 @@ function animate () {
         panel.el.style.height = ''
         panel.el.querySelectorAll('.hidden').forEach((hiddenEl, index) => {
           hiddenEl.classList.add('unhidden')
-          if (index === 0) {
-            setTimeout(() => {
-              panel.el.scrollIntoView({behavior: "smooth"})
-            }, 300)
-          }
         })
         panel.finishedAnimating = true
       }
