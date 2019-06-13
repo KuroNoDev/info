@@ -68,5 +68,8 @@ export default [{
   }, {
     x: 'TypeScript',
     y: [new Date('2019-05-11').getTime(), today]
+  }, {
+    x: 'Python (Django)',
+    y: [new Date('2019-06-10').getTime(), today]
   }]
 }]
