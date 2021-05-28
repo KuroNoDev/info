@@ -153,10 +153,10 @@
     </div>
     <div class="row">
       <Panel>
-        <h1>TORO Coder Cloud</h1>
+        <h1>TORO Coder Cloud / Martini</h1>
         <h3>A revolutionary web based IDE</h3>
         <h3 class="no-animate">
-          <a href="https://www.torocloud.com/toro-integrate/developing" target="blank">more info</a>
+          <a href="https://www.torocloud.com/martini" target="blank">more info</a>
         </h3>
         <h3>Technologies: Node.js, Websockets, ES6, AnguarJS</h3>
       </Panel>
