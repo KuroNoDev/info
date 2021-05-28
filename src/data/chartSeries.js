@@ -19,7 +19,7 @@ export default [{
     y: [new Date('2014-12-02').getTime(), today]
   }, {
     x: 'AngularJS',
-    y: [new Date('2015-04-15').getTime(), today, new Date('2019-05-17').getTime()]
+    y: [new Date('2015-04-15').getTime(), new Date('2019-05-17').getTime()]
   }, {
     x: 'ES6',
     y: [new Date('2015-04-15').getTime(), today]
@@ -42,15 +42,6 @@ export default [{
     x: 'Flexbox',
     y: [new Date('2016-04-15').getTime(), today]
   }, {
-    x: 'Angular',
-    y: [new Date('2017-01-11').getTime(), new Date('2017-03-12').getTime()]
-  }, {
-    x: 'mySQL',
-    y: [new Date('2017-02-15').getTime(), new Date('2017-04-15').getTime()]
-  }, {
-    x: 'ReactJS',
-    y: [new Date('2017-07-11').getTime(), new Date('2017-08-11').getTime()]
-  }, {
     x: 'ReactJS',
     y: [new Date('2019-05-18').getTime(), today]
   }, {
@@ -58,10 +49,10 @@ export default [{
     y: [new Date('2018-03-11').getTime(), new Date('2019-05-17').getTime()]
   }, {
     x: 'Jekyll',
-    y: [new Date('2018-09-11').getTime(), today]
+    y: [new Date('2018-09-11').getTime(), new Date('2020-09-01').getTime()]
   }, {
     x: 'Firebase',
-    y: [new Date('2019-04-11').getTime(), today]
+    y: [new Date('2019-04-11').getTime(), new Date('2020-09-01').getTime()]
   }, {
     x: 'Vue.js',
     y: [new Date('2019-05-11').getTime(), today]
@@ -70,6 +61,12 @@ export default [{
     y: [new Date('2019-05-11').getTime(), today]
   }, {
     x: 'Python',
-    y: [new Date('2019-06-10').getTime(), today]
+    y: [new Date('2019-06-10').getTime(), new Date('2020-09-01').getTime()]
+  }, {
+    x: 'Rails',
+    y: [new Date('2021-01-01').getTime(), today]
+  }, {
+    x: 'GraphQL',
+    y: [new Date('2020-04-01').getTime(), today]
   }]
 }]

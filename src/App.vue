@@ -13,9 +13,9 @@
             </div>
             <div class="no-animate" style="display: flex; flex-direction: column;">
               <h3>Fullname: Mykel Ray Perez</h3>
-              <h3>Age: 23</h3>
+              <h3>Age: 25</h3>
               <br class="no-animate">
-              <h4>Occupation: Frontend Developer</h4>
+              <h4>Occupation: Frontend Engineer</h4>
               <h4>Email Address: kuronogiasu@gmail.com</h4>
             </div>
           </div>
@@ -29,13 +29,17 @@
               <img v-on:load="slotProps.imgOnload" class="no-animate" src="./assets/affiliates.svg" style="display: block; width: 100%;">
             </div>
             <div class="no-animate" style="display: flex; flex-direction: column;">
+              <h3>ConciergeU</h3>
+              <h3>Role: Frontend Engineer</h3>
+              <h4>July 2019 - present</h4>
+              <br class="no-animate">
               <h3>TORO Cloud</h3>
               <h3>Role: Frontend Team Leader</h3>
               <h4>November 2014 - May 2019</h4>
               <br class="no-animate">
               <h3>GenericMedia</h3>
-              <h3>Role: Frontend Developer</h3>
-              <h4>September 2018 - present</h4>
+              <h3>Role: Frontend Engineer</h3>
+              <h4>September 2018 - September 2019</h4>
             </div>
           </div>
         </Panel>
@@ -99,6 +103,16 @@
     </div>
     <div class="row">
       <h1>Projects</h1>
+    </div>
+    <div class="row">
+      <Panel>
+        <h1>Kuzen</h1>
+        <h3>AI Chatbot</h3>
+        <h3>Technologies: ReactJS, Ruby on Rails</h3>
+        <h3 class="no-animate">
+          <a href="https://www.kuzen.io" target="blank">more info</a>
+        </h3>
+      </Panel>
     </div>
     <div class="row">
       <Panel>
